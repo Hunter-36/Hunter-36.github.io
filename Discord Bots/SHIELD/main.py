@@ -152,4 +152,3 @@ async def shutdown(ctx):
     await ctx.send(embed=shield_status)
     exit()
 
-client.run('MTAzMDY2MzE2NjAwNDMwNTk2MQ.G2T49f.xcOZo6ZdrJhmCQklqKK4rCRSiqyvnH4UUpXSHw')
