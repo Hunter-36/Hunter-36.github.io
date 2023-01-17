@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Triangle Hunter Sutton</title>
         <!-- Define our shaders! -->
-        <script id="vertex shader" type="x-shader/x-vertex">
+        <script id="vertex-shader" type="x-shader/x-vertex">
             attribute vec4 vPosition;
             void main() {
             gl_Position = vPosition;
@@ -13,7 +13,7 @@
         <script id="fragment-shader" type="x-shader/x-fragment">
             precision mediump float;
             void main() {
-            gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0);
+            gl_FragColor = vec4( 0.7, 0.1, 0.6, 1.0);
             }
         </script>
         <!-- include our libraries for WebGL -->
