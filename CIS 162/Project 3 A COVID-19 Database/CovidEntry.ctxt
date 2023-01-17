@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=CovidEntry
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ CovidEntry\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=st\ m\ d\ di\ dd\ ti\ td
+comment1.target=CovidEntry(java.lang.String,\ int,\ int,\ int,\ int,\ int,\ int)
+comment2.params=
+comment2.target=int\ getMonth()
+comment3.params=
+comment3.target=int\ getDay()
+comment4.params=
+comment4.target=java.lang.String\ getState()
+comment5.params=
+comment5.target=int\ getDailyInfections()
+comment6.params=
+comment6.target=int\ getDailyDeaths()
+comment7.params=
+comment7.target=int\ getTotalInfections()
+comment8.params=
+comment8.target=int\ getTotalDeaths()
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10
