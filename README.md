@@ -1,6 +1,7 @@
-## Welcome to GitHub Pages
+# Welcome to Hunter Sutton's Github Page
 
-You can use the [editor on GitHub](https://github.com/Hunter-36/Hunter-36.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+## GVSU Files
+[CIS 367](https://github.com/Hunter-36/Hunter-36.github.io/tree/main/CIS%20367)
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
