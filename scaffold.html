@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hunter Sutton's Website</title>
+    <style>
+        /* color of the website and links */
+        body {
+            background: #353535;
+            color: #ffffff;
+        }
+
+        a:link {
+            color: #008be1;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #008be1;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #f00000;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: #eeff00;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        .nobreak {
+            white-space: nowrap;
+        }
+
+        /* Formatting for lists */
+
+        dt {
+            font-weight: bold;
+            font-variant: small-caps;
+            font-size: 135%;
+        }
+
+        dd {
+            margin-bottom: 1em;
+        }
+
+        .listHeader {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        ul,
+        ol {
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        /* Navigation */
+
+        #nav {
+            position: absolute;
+            width: 150px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #008be1;
+            /* "Laker blue is #0065a4, but fails ARIA contrast test.
+        Color above is as close as I can get
+        https://www.gvsu.edu/identity/web-12.htm#ColorScheme
+    */
+        }
+
+        #nav a {
+            color: white;
+            font-family: arial, helvetica, sans-serif;
+            font-size: 90%;
+        }
+
+        #nav p {
+            margin-left: 10px;
+        }
+
+        #nav hr {
+            margin: 10px;
+        }
+
+        .nav-indent1 {
+            padding-left: 10px;
+        }
+
+        @media print {
+            #nav {
+                visibility: hidden;
+            }
+
+            #content {
+                left: 0;
+            }
+        }
+
+        /* A link that isn't displayed so that the
+   accessibility checker is happy.
+ */
+        .bypass {
+            position: absolute;
+            top: 0;
+            right: 100%;
+            z-index: 9999;
+            color: black;
+        }
+
+        @media screen {
+            #content {
+                position: fixed;
+                margin-left: 10px;
+                left: 150px;
+                overflow: scroll;
+                height: 100%;
+            }
+        }
+
+        .kielceAssignmentTable {
+            border-spacing: 35px 0;
+        }
+
+        .kielceAssignmentTable tr th {
+            text-align: left;
+        }
+
+        .kielceAssignmentTable tr td {
+            vertical-align: top;
+        }
+
+        .kielceAssignmentTable_due {
+            white-space: nowrap;
+        }
+
+        .kielceAssignmentTable_title {
+            white-space: nowrap;
+        }
+
+        .exam {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="nav">
+
+        <p><a target="_top" href="index.html">Home Page</a></p>
+
+        <p><a href=".html">GVSU Classes</a></p>
+
+        <p><a href=".html">Discord Bots</a></p>
+
+        <p><a href=".html">Gaming Things</a></p>
+
+        <hr>
+
+        <p><a href='https://github.com/Hunter-36/Hunter-36.github.io'>My GitHub</a></p>
+
+    </div>
+
+
+    <div id="content">
+        <div>
+            <h1 style="text-align: center">
+                <span>Hunter Sutton's Website</span><br>
+                <h5 style="text-align: center">
+                    <span>Inspired by Zachary Kurmas' Class Website</span>
+                </h5>
+                <h5>
+                    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                </h5>
+            </h1>
+        </div>
+
+
+        <dl>
+            <dt>Contact Information:</dt>
+            <dd>
+                <style>
+                    .contactInfoTable {
+                        width: 100%;
+                    }
+
+                    .contactInfoTable td {
+                        border: 0;
+                        margin: 3px;
+                    }
+
+                    .ciHeader {
+                        font-weight: bold
+                    }
+
+                    .contactInfoTable td {
+                        text-align: left;
+                    }
+
+                    .contactInfoTable td:nth-child(1) {
+                        width: 100px;
+                    }
+
+                    .contactInfoTable td:nth-child(3) {
+                        width: 100px;
+                    }
+
+                    .contactInfoTable td:nth-child(4) {
+                        width: 250px;
+                    }
+                </style>
+
+                <table class="contactInfoTable">
+                    <tr>
+                        <td class="ciHeader">Me:</td>
+                        <td>Hunter Sutton</td>
+                        <td class="ciHeader">Email:</td>
+                        <td>sutton36hunter@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td class="ciHeader">Phone:</td>
+                        <td>(231)-384-3243</td>
+                        <td class="ciHeader">Availability:</td>
+                        <td>All Week, 5pm-11pm</td>
+                    </tr>
+                    <tr>
+                        <td class="ciHeader">Home page:
+                        <td>
+                            <a
+                                href='https://hunter-36.github.io/index.html'><code>https://hunter-36.github.io/index.html</code></a>
+                        </td>
+                        <td>
+                    </tr>
+                </table>
+
+
+            </dd>
+
+            <dt>Other Information:
+            <dd>
+                <ul>
+                    <li><a href=".html">Other</a>
+                    <li><a href="https://discord.gg/5phB8RnjsK">My Discord Link</a></li>
+                </ul>
+
+            <dt>Other:</dt>
+            <dd> I will post announcements at <a target="_top"
+                    href="https://piazza.com/gvsu/winter2023/cis343">Piazza</a>.
+                Please check there regularly.
+            </dd>
+
+            <dt>Other:</dt>
+            <dd>
+                More goes here
+            </dd>
+
+            <dt>Other:
+            <dd>
+                Sample Text
+            </dd>
+
+            <dt>Other:
+            <dd>
+                More Fill
+            </dd>
+        </dl>
+        <hr>
+        <p>Updated Thursday, 19 January 2023, 3:00 PM</p>
+    </div>
+</body>
+
+</html>
