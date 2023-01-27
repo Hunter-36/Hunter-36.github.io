@@ -8,7 +8,6 @@
         return xhr.status == okStatus ? xhr.responseText : null;
     };
 
-    
     function initShaders(gl, vShaderName, fShaderName) {
         function getShader(gl, shaderName, type) {
             var shader = gl.createShader(type),
