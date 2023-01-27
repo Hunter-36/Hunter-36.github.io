@@ -1,0 +1,3 @@
+Good start.  However, you may want a few more diagonal tests.
+Diagonals can end on 0, 1, or 2 of the four "walls".  Be sure to check different combinations of those situations.
+
