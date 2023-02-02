@@ -1,0 +1,10 @@
+(define (quadratic x1 y1 x2 y2)
+    (let (
+        (subX (- x1 x2))
+        (subY (- y1 y2))
+    )
+    (sqrt (+ (* subX subX) (* subY subY)))
+    )
+)
+(display (quadratic 5 10 15 20))
+(display "\n")
