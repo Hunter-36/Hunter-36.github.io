@@ -1,4 +1,4 @@
-(define (draw_row)
+(define (draw_row w)
     (display "*")
     (if (= w 1)
         (newline)
@@ -8,9 +8,9 @@
 
 (define (rectangle w h)
     (draw_row w)
-    (if (= height)
+    (if (= h)
     ()
-    (rectangle w (- height 1))
+    (rectangle w (- h 1))
     )
 )
 
