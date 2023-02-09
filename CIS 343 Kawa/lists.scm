@@ -21,3 +21,15 @@
         (cons (car lst) (insert_at (cdr lst) item (- x 1)))
     )
 )
+
+
+(define (reverse lst)
+    (if (null? lst)
+        lst
+        (append (reverse (cdr lst)) (car lst))
+    )
+)
+
+
+(define (reverse2 lst)
+    )
