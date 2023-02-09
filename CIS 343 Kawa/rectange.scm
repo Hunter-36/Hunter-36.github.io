@@ -1,0 +1,17 @@
+(define (draw_row w)
+    (display "*")
+    (if (= w 1)
+        (newline)
+        (draw_row (- w 1))
+    )
+)
+
+(define (rectangle w h)
+    (draw_row w)
+    (if (= h)
+    ()
+    (rectangle w (- h 1))
+    )
+)
+
+(rectangle 10 5)
