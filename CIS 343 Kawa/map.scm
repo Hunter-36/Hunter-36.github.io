@@ -88,3 +88,13 @@
 )
 (newline)
 
+(define (map-by-index action max)
+    (if (= max 0)
+        '()
+        (append (map-by-index action (- max 1)) (list (action (- max 1))))
+    )
+)
+(display
+    (map-by-index (lambda (x) (* x 2)) 5)
+)
+(newline)
