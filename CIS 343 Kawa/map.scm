@@ -98,3 +98,14 @@
     (map-by-index (lambda (x) (* x 2)) 5)
 )
 (newline)
+
+(defiine (contains value lst)
+    (fold
+        (lambda (item partial))
+        (or (eq? value item) partial)
+    )
+    #f
+    lst
+)
+(display (contains 'd '(a b c d e f g)))
+(newline)
