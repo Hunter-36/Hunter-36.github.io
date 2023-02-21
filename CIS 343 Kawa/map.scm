@@ -77,7 +77,14 @@
 
 (require 'list-lib)
 (display
-    (fold (lambda (item partial) (+ item partial) 0 '(1 2 3 4 5 6)))
+    (fold (lambda (item partial) (+ item partial)) 0 '(1 2 3 4 5 6))
+)
+(newline)
+
+(define lst3 '(8 6 7 -10 3 0 9))
+(display
+    (fold (lambda (item partial) (if (> item partial) item partial))
+    (car lst3) lst3)
 )
 (newline)
 
