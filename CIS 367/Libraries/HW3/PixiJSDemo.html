@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sutton - 367 Pixi demo</title>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+  </head>
+  <body>
+    <script>
+      // Create the application helper and add its render target to the page
+      let app = new PIXI.Application({ width: 640, height: 360 });
+      document.body.appendChild(app.view);
+
+      // Create the sprite and add it to the stage
+let sprite = PIXI.Sprite.from('sample.png');
+sprite.anchor.set(0.5); // Set the anchor point to the center of the sprite
+sprite.position.set(app.screen.width / 2, app.screen.height / 2); // Set the initial position of the sprite to the center of the screen
+sprite.vx = 0; // Set the initial x velocity of the sprite to zero
+sprite.vy = 0; // Set the initial y velocity of the sprite to zero
+app.stage.addChild(sprite);
+
+// Set up the keyboard handlers
+let left = keyboard(37);
+let up = keyboard(38);
+let right = keyboard(39);
+let down = keyboard(40);
+
+// Left arrow key press
+left.press = () => {
+  sprite.vx = -5; // Set the x velocity of the sprite to move it left
+  sprite.vy = 0; // Set the y velocity of the sprite to zero
+};
+
+// Left arrow key release
+left.release = () => {
+  if (!right.isDown && sprite.vy === 0) {
+    sprite.vx = 0; // Stop the sprite if the right arrow key isn't pressed and the y velocity is zero
+  }
+};
+
+// Up arrow key press
+up.press = () => {
+  sprite.vy = -5; // Set the y velocity of the sprite to move it up
+  sprite.vx = 0; // Set the x velocity of the sprite to zero
+};
+
+// Up arrow key release
+up.release = () => {
+  if (!down.isDown && sprite.vx === 0) {
+    sprite.vy = 0; // Stop the sprite if the down arrow key isn't pressed and the x velocity is zero
+  }
+};
+
+// Right arrow key press
+right.press = () => {
+  sprite.vx = 5; // Set the x velocity of the sprite to move it right
+  sprite.vy = 0; // Set the y velocity of the sprite to zero
+};
+
+// Right arrow key release
+right.release = () => {
+  if (!left.isDown && sprite.vy === 0) {
+    sprite.vx = 0; // Stop the sprite if the left arrow key isn't pressed and the y velocity is zero
+  }
+};
+
+// Down arrow key press
+down.press = () => {
+  sprite.vy = 5; // Set the y velocity of the sprite to move it down
+  sprite.vx = 0; // Set the x velocity of the sprite to zero
+};
+
+// Down arrow key release
+down.release = () => {
+  if (!up.isDown && sprite.vx === 0) {
+    sprite.vy = 0; // Stop the sprite if the up arrow key isn't pressed and the x velocity is zero
+  }
+};
+
+// Add a ticker callback to update the sprite's position based on its velocity
+app.ticker.add((delta) => {
+  sprite.x += sprite.vx * delta;
+  sprite.y += sprite.vy * delta;
+
+  // Constrain the sprite to the screen bounds
+  sprite.x = Math.max(sprite.width / 2, Math.min(app.screen.width - sprite.width / 2, sprite.x));
+  sprite.y = Math.max(sprite.height / 2, Math.min(app.screen.height - sprite.height / 2, sprite.y));
+});
+    </script>
+  </body>
+</html>
